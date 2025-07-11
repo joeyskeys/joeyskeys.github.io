@@ -1,7 +1,9 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig, defineConfigWithTheme } from 'vitepress'
+//import type { ThemeConfig } from
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+//export default defineConfigWithTheme<ThemeConfig>({
   title: "Joey's Blog",
   description: "A place for me to write something.",
   themeConfig: {
