@@ -5,8 +5,12 @@ import { defineConfig, defineConfigWithTheme } from 'vitepress'
 export default defineConfig({
 //export default defineConfigWithTheme<ThemeConfig>({
   title: "Joey's Blog",
-  description: "A place for me to write something.",
+  description: "Something about compute.",
+  head: [['link', {rel: 'icon', href: '/images/favicon.ico'}]],
+  srcDir: './src',
+  outDir: './public/dist',
   themeConfig: {
+    /*
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
@@ -26,5 +30,6 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/joeyskeys' }
     ]
-  }
+    */
+  },
 })
