@@ -1,5 +1,5 @@
 import { defineConfig, defineConfigWithTheme } from 'vitepress'
-//import type { ThemeConfig } from
+import tailwindcss from '@tailwindcss/vite'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -32,4 +32,9 @@ export default defineConfig({
     ]
     */
   },
+  vite: {
+    plugins: [
+      tailwindcss(),
+    ],
+  }
 })

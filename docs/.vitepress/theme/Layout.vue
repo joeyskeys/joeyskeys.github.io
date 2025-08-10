@@ -1,7 +1,17 @@
-<template>
-  <div>
-    <h1>Garabit Blog</h1>
+<script lang="ts" setup>
+import { useData } from 'vitepress'
+import { computed, provide, useSlots } from 'vue'
+import BlogIndex from './pages/blog/BlogIndex.vue'
+const { frontmatter } = useData()
+</script>
 
-    <Content />
+<template>
+  <h1>Test</h1>
+  <h2>{{ frontmatter.layout }}</h2>
+  <div class="min-h-screen bg-[#FC88FF] pt-16">
+    <main class="mx-auto max-w-screen-md">
+      <h3>what the fuck</h3>
+      <BlogIndex/>
+    </main>
   </div>
 </template>
