@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-import { useData } from 'vitepress'
-import { data } from '../../../data/blog.data.mts'
+import { data } from '../../../data/blog.data'
 
 const { frontmatter } = useData()
 </script>

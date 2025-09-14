@@ -10,8 +10,8 @@ const { frontmatter } = useData()
   <h2>{{ frontmatter.layout }}</h2>
   <div class="min-h-screen bg-[#FC88FF] pt-16">
     <main class="mx-auto max-w-screen-md">
-      <h3>what the fuck</h3>
-      <BlogIndex/>
+      <h3 class="text-5xl font-bold underline">what the fuck</h3>
+      <BlogIndex v-if="frontmatter.layout === 'blog'" />
     </main>
   </div>
 </template>

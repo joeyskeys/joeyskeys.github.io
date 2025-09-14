@@ -6,3 +6,6 @@ cache/
 
 # dist
 docs/.vitepress/dist/
+
+components.d.ts
+auto-imports.d.ts
