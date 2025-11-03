@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { data } from '../../../data/blog.data'
-
+import BlogCard from '../../components/BlogCard.vue'
 const { frontmatter } = useData()
 </script>
 
@@ -9,6 +9,9 @@ const { frontmatter } = useData()
     <h1 class="text-6xl font-semibold">
       {{ frontmatter.title }}
     </h1>
+    <p>
+      {{ frontmatter.description }}
+    </p>
 
     <div class="space-y-10">
       <BlogCard v-for="post in data" :key="post.url" :post="post" />
