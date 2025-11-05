@@ -1,6 +1,6 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
-layout: blog
+layout: index
 title: test-title
 
 hero:

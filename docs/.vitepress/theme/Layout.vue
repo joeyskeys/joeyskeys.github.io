@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { useData } from 'vitepress'
 import { computed, provide, useSlots } from 'vue'
+import Header from '../components/Header.vue'
 import BlogIndex from './pages/blog/BlogIndex.vue'
 import BlogShow from './pages/blog/BlogShow.vue'
 const { frontmatter } = useData()
@@ -9,9 +10,10 @@ const { frontmatter } = useData()
 <template>
   <div class="min-h-screen bg-[#FC88FF] pt-16">
     <main class="mx-auto max-w-screen-md">
-      <h2>{{ frontmatter.layout }}</h2>
-      <BlogIndex v-if="frontmatter.layout === 'blog'" />
-      <BlogShow v-else-if="frontmatter.layout === 'blog-show'" />
+      <Header />
+      <Index v-if="frontmatter.layout === 'index'" />
+      <BlogIndex v-else-if="frontmatter.layout === 'blog_page'" />
+      <BlogShow v-else-if="frontmatter.layout === 'blog_show'" />
       <!--Content /-->
     </main>
   </div>
