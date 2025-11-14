@@ -3,3 +3,5 @@
 @config "../../../../tailwind.config.cjs";
 @source '../../../../src/**/*.md';
 @source '../../**/*.{vue,ts}';
+
+@custom-variant dark (&:where(.dark, .dark *));
