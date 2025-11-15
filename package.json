@@ -3,13 +3,21 @@
     "@tailwindcss/typography": "^0.5.18",
     "@tailwindcss/vite": "^4.1.13",
     "tailwindcss": "^4.1.13",
-    "vitepress": "^1.6.3"
+    "vitepress": "^1.6.3",
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0",
+    "tsx": "^4.0.0"
   },
   "scripts": {
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
+    "docs:dev": "npm run generate-files && vitepress dev docs",
+    "docs:build": "npm run generate-files && vitepress build docs",
     "docs:preview": "vitepress preview docs",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "generate-files": "tsx docs/.vitepress/script/generate-entries.ts",
+    "pre-docs:dev": "tsx docs/.vitepress/script/generate-entries.ts",
+    "pre-docs:build": "tsx docs/.vitepress/script/generate-entries.ts",
+    "test:hook": "echo 'tada'",
+    "pre-test:hook": "echo 'pre tada'"
   },
   "dependencies": {
     "@types/node": "^24.3.3",

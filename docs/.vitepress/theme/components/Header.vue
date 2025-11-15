@@ -1,19 +1,21 @@
 <script lang="ts" setup>
 import { ContentData } from 'vitepress'
 import {ref, onMounted} from 'vue'
+import { headerEntries } from '../pages/header-entries'
 
 const isDark = ref(false)
+const navItems = ref([])
+const router = useRouter()
 
 const toggleTheme = () => {
   isDark.value = !isDark.value
-  document.documentElement.classList.toggle('dark', isDark.value);
+  //document.documentElement.classList.toggle('dark', isDark.value);
+  document.documentElement.setAttribute('data-theme',isDark.value ? 'dark' : 'light')
   localStorage.setItem('theme', isDark.value ? 'dark' : 'light')
-
-  console.log('dark mode: ', isDark.value);
-  console.log('html classes: ', document.documentElement.className);
 }
 
 onMounted(() => {
+  // theme
   const savedTheme = localStorage.getItem('theme')
   if (savedTheme) {
     isDark.value = savedTheme === 'dark'
@@ -42,7 +44,11 @@ onMounted(() => {
         </div>
       </div>
       <ul>
-
+        <div>
+          <a v-for="item in headerEntries" :href="item.link">
+            {{ item.name }}
+          </a>
+        </div>
       </ul>
     </nav>
   </header>
