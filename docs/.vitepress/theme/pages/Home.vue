@@ -4,16 +4,16 @@ const { frontmatter } = useData()
 </script>
 
 <template>
-  <section class="space-y-16">
+  <section class="">
     <h1>index page</h1>
-    <h1 class="text-6xl font-semibold">
+    <h1 class="font-semibold">
       {{ frontmatter.title }}
     </h1>
     <p>
       {{ frontmatter.description }}
     </p>
 
-    <div class="space-y-10">
+    <div class="">
     </div>
 
     <div class="flex justify-center">
