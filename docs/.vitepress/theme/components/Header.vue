@@ -30,7 +30,7 @@ onMounted(() => {
 
 <template>
   <header>
-    <nav class="flex flex-row">
+    <nav class="flex flex-row py-2 justify-between">
       <div class="flex flex-row">
         <a class="text-black dark:text-gray-200">
           <img>

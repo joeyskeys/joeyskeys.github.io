@@ -6,9 +6,10 @@ module.exports = {
   ],
   theme: {
     extend: {
-      typography: {
-        // ...
-      },
+      colors: {
+        'bg': 'var(--color-bg)',
+        'primary': 'var(--color-primary)',
+      }
     },
   },
   plugins: [

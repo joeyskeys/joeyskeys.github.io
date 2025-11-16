@@ -9,7 +9,7 @@ const { frontmatter } = useData()
 </script>
 
 <template>
-  <div class="min-h-screen bg-[#FC88FF] pt-16">
+  <div class="bg-bg text-primary">
     <main class="mx-auto max-w-screen-md">
       <Header />
       <Home v-if="frontmatter.layout === 'index'" />
