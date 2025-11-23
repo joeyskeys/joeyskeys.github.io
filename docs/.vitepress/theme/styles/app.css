@@ -17,3 +17,9 @@
         --color-primary: #dadadb;
     }
 }
+
+@layer components {
+    .home-page-svg {
+        @apply w-8 h-8 m-1;
+    }
+}

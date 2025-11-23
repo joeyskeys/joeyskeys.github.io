@@ -1,27 +1,8 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: index
-title: test-title
-
-hero:
-  name: "Joey's Blog"
-  text: "A place for me to write something."
-  tagline: My great project tagline
-  actions:
-    - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
-
-features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+title: Joey Skeys' Site
+description: tada
 ---
 
-test content in main
+I work in VFX industy as a technical director, specialized in graphics & DCC related deveopment.

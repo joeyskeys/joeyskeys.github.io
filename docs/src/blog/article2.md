@@ -1,10 +1,10 @@
 ---
 layout: blog-show
-title: article1
-date: 2025-11-22
-excerpt: this's excerpt
+title: article2
+date: 2025-11-23
+excerpt: excerpt for 2
 ---
-## artical 1
+## artical 2
 
 dadada
 [[toc]]

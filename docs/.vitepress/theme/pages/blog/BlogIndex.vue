@@ -5,23 +5,15 @@ const { frontmatter } = useData()
 </script>
 
 <template>
-  <section class="space-y-16">
-    <h1 class="text-6xl font-semibold">
-      {{ frontmatter.title }}
+  <section class="">
+    <h1 class="my-4 text-l font-semibold">
+      <a href="/">Home</a>
+      > {{ frontmatter.title }}
     </h1>
-    <p>
-      {{ frontmatter.description }}
-    </p>
 
-    <div class="space-y-10">
+    <div class="">
       <BlogCard v-for="post in data" :key="post.url" :post="post" />
     </div>
 
-    <div class="flex justify-center">
-      <a
-        href="/"
-        class="border-4 border-black bg-[#FFEB00] px-8 py-4 shadow-[4px_4px_0_black] transition duration-150 ease-linear hover:bg-[#fff90d] hover:shadow-[6px_6px_0_black] hover:-translate-x-[0.125rem] hover:-translate-y-[0.125rem]"
-      >Back to Home</a>
-    </div>
   </section>
 </template>

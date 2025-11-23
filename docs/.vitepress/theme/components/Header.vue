@@ -30,9 +30,9 @@ onMounted(() => {
 
 <template>
   <header>
-    <nav class="flex flex-row py-2 justify-between">
+    <nav class="m-2 flex flex-row py-2 justify-between">
       <div class="flex flex-row">
-        <a class="text-black dark:text-gray-200">
+        <a href="/" class="text-xl font-bold text-black dark:text-gray-200">
           <img>
           Joey Skeys
         </a>
@@ -45,7 +45,7 @@ onMounted(() => {
       </div>
       <ul>
         <div>
-          <a v-for="item in headerEntries" :href="item.link">
+          <a class="text-lg" v-for="item in headerEntries" :href="item.link">
             {{ item.name }}
           </a>
         </div>

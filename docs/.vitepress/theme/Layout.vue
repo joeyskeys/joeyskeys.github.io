@@ -13,7 +13,7 @@ const { frontmatter } = useData()
   <div class="min-h-screen flex flex-col bg-bg text-primary">
     <div class="mx-auto max-w-screen-lg w-full flex flex-col flex-grow">
       <Header />
-      <main class="flex-grow">
+      <main :class="`flex-1 ${frontmatter.layout === 'index' ? 'place-content-center' : ''}`">
         <Home v-if="frontmatter.layout === 'index'" />
         <BlogIndex v-else-if="frontmatter.layout === 'blog-page'" />
         <BlogShow v-else-if="frontmatter.layout === 'blog-show'" />
