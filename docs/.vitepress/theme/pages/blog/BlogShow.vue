@@ -27,7 +27,7 @@ const { frontmatter } = useData()
       </h1>
       <div class="my-1 text-sm text-secondary">{{ formatDate(frontmatter.date) }}</div>
 
-      <Content class="my-3 text-lg" />
+      <Content class="my-3 text-lg content" />
     </article>
   </div>
 </template>

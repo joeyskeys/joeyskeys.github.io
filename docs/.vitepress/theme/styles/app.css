@@ -43,10 +43,14 @@
 }
 
 @layer md-content {
+    .content h2 {
+        @apply text-6xl;
+    }
+
     .content a {
 
     }
     .content p {
-        
+        @apply text-3xl;
     }
 }
