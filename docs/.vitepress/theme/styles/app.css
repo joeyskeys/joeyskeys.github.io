@@ -28,16 +28,6 @@
     .home-page-svg {
         @apply w-8 h-8 m-1;
     }
-<<<<<<< HEAD
-}
-
-@layer md-content {
-    .content a {
-
-    }
-    .content p {
-        
-=======
 
     .post-link {
         color: var(--color-link);
@@ -49,6 +39,14 @@
 
     .test-block {
         @apply bg-red-50;
->>>>>>> 5c66dd0 (adjust styling)
+    }
+}
+
+@layer md-content {
+    .content a {
+
+    }
+    .content p {
+        
     }
 }
