@@ -28,14 +28,14 @@ defineProps<{
       {{ post.frontmatter.description }}
     </p>
   </article-->
-  <article>
-    <h2>
-      <a :href="post.url">
+  <article class="flex flex-col mt-5 border-b-2">
+    <h1 class="text-6xl font-semibold mb-2">
+      <a :href="post.url" class="post-link">
         {{ post.title }}
       </a>
-    </h2>
-    <div>{{ post.date }}</div>
-    <p>{{ post.excerpt }}</p>
-    <div><a :href="post.url">Read more →</a></div>
+    </h1>
+    <div class="my-1 text-sm text-secondary">{{ post.date }}</div>
+    <p class="mt-3 text-lg">{{ post.excerpt }}</p>
+    <div class="my-4 text-xl"><a :href="post.url" class="post-link">Read more →</a></div>
   </article>
 </template>

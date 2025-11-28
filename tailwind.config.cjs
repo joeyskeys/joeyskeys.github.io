@@ -9,6 +9,9 @@ module.exports = {
       colors: {
         'bg': 'var(--color-bg)',
         'primary': 'var(--color-primary)',
+        'secondary': 'var(--color-secondary)',
+        'link': 'var(--color-link)',
+        'link-hover': 'var(--color-link-hover)',
       }
     },
   },

@@ -1,5 +1,6 @@
 import type { ContentData } from 'vitepress'
 import { createContentLoader } from 'vitepress'
+import { formatDate } from '../script/utils.ts'
 
 declare const data: ContentData[]
 export { data }
@@ -18,7 +19,7 @@ export default createContentLoader('blog/*.md', {
         return {
           title: page.frontmatter.title,
           url: page.url,
-          date: page.frontmatter.date,
+          date: formatDate(page.frontmatter.date),
           excerpt: page.frontmatter.excerpt,
           frontmattter: page.frontmatter,
           page: page,
@@ -32,7 +33,7 @@ export default createContentLoader('blog/*.md', {
   },
 })
 
-function getExcerpt(content: string) {
+function getExcerpt(content: string): string {
   const cleanContent = content
     .replace(/^#+\s+.+$/gm, '') // Remove header lines
     .replace(/```[\s\S]*?```/g, '') // Remove code blocks

@@ -8,13 +8,19 @@
 
 @layer base {
     :root {
-        --color-bg: #f5f5f5;
+        --color-bg: #e5e5e5;
         --color-primary: #1e1e1e;
+        --color-secondary: #6e6e6e;
+        --color-link: #4646e3;
+        --color-link-hover: #2020af;
     }
 
     [data-theme='dark'] {
         --color-bg: #37383e;
         --color-primary: #dadadb;
+        --color-secondary: #8a8a8a;
+        --color-link: #78c6d7;
+        --color-link-hover: #55a6b6;
     }
 }
 
@@ -22,6 +28,7 @@
     .home-page-svg {
         @apply w-8 h-8 m-1;
     }
+<<<<<<< HEAD
 }
 
 @layer md-content {
@@ -30,5 +37,18 @@
     }
     .content p {
         
+=======
+
+    .post-link {
+        color: var(--color-link);
+    }
+
+    .post-link:hover {
+        color: var(--color-link-hover);
+    }
+
+    .test-block {
+        @apply bg-red-50;
+>>>>>>> 5c66dd0 (adjust styling)
     }
 }
