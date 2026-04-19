@@ -12,7 +12,7 @@ dadada
 This is my home page, written in **markdown**.
 [[toc]]
 
-- It will be injected into the layout.
+- It will be injected into the layout{#test-block}.
 - The `<Content />` component will display this text.
 - The final page will have your custom header and footer around it.
 [[toc]]

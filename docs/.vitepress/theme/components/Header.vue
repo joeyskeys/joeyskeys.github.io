@@ -12,18 +12,21 @@ const toggleTheme = () => {
   //document.documentElement.classList.toggle('dark', isDark.value);
   document.documentElement.setAttribute('data-theme',isDark.value ? 'dark' : 'light')
   localStorage.setItem('theme', isDark.value ? 'dark' : 'light')
+  console.info('storage value: ', localStorage.getItem('theme'))
 }
 
 onMounted(() => {
   // theme
   const savedTheme = localStorage.getItem('theme')
+  console.info('saved theme: ', savedTheme)
   if (savedTheme) {
     isDark.value = savedTheme === 'dark'
   } else {
     isDark.value = window.matchMedia('(prefers-color-scheme: dark)').matches
   }
   if (isDark.value) {
-    document.documentElement.classList.add('dark')
+    //document.documentElement.classList.add('dark')
+    document.documentElement.setAttribute('data-theme', isDark.value ? 'dark' : 'light')
   }
 })
 </script>

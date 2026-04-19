@@ -14,19 +14,28 @@ defineProps<{
 </script>
 
 <template>
-  <article
-    class="group relative border-4 border-black bg-white p-8 shadow-[8px_8px_0_black] transition duration-150 ease-linear space-y-4 hover:shadow-[12px_12px_0_black] hover:-translate-x-1 hover:-translate-y-1"
+  <!--article
+    class="my-5 group relative border-4 border-black bg-white p-12 shadow-[8px_8px_0_black] transition duration-150 ease-linear space-y-6 hover:shadow-[12px_12px_0_black] hover:-translate-x-1 hover:-translate-y-1"
   >
-    <h2 class="text-3xl font-semibold text-black">
+    <h2 class="text-4xl text-black font-medium">
       <a :href="post.url">
-        {{ post.title }}
+        {{ post.frontmatter.title }}
         <span class="absolute inset-0" />
       </a>
     </h2>
-    <div class="text-sm font-medium text-zinc-600">{{ post.date }}</div>
-    <p class="text-lg text-black">{{ post.excerpt }}</p>
-    <div>
-      <a class="font-semibold text-black underline underline-offset-4" :href="post.url">Read more -></a>
-    </div>
+
+    <p class="text-xl text-black">
+      {{ post.frontmatter.description }}
+    </p>
+  </article-->
+  <article class="flex flex-col mt-5 border-b-2">
+    <h1 class="text-6xl font-semibold mb-2">
+      <a :href="post.url" class="post-link">
+        {{ post.title }}
+      </a>
+    </h1>
+    <div class="my-1 text-sm text-secondary">{{ post.date }}</div>
+    <p class="mt-3 text-lg">{{ post.excerpt }}</p>
+    <div class="my-4 text-xl"><a :href="post.url" class="post-link">Read more →</a></div>
   </article>
 </template>
