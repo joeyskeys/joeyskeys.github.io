@@ -11,16 +11,16 @@
         --color-bg: #e5e5e5;
         --color-primary: #1e1e1e;
         --color-secondary: #6e6e6e;
-        --color-link: #4646e3;
-        --color-link-hover: #2020af;
+        --color-link: #404040;
+        --color-link-hover: #1e1e1e;
     }
 
     [data-theme='dark'] {
         --color-bg: #37383e;
         --color-primary: #dadadb;
         --color-secondary: #8a8a8a;
-        --color-link: #78c6d7;
-        --color-link-hover: #55a6b6;
+        --color-link: #a8a8a8;
+        --color-link-hover: #dadadb;
     }
 }
 
@@ -40,17 +40,75 @@
     .test-block {
         @apply bg-red-50;
     }
-}
 
-@layer md-content {
-    .content h2 {
-        @apply text-6xl;
+    .blog-content {
+        @apply text-lg leading-relaxed;
     }
 
-    .content a {
-
+    .blog-content h2 {
+        @apply mt-12 mb-4 text-3xl font-semibold tracking-tight text-primary;
     }
-    .content p {
-        @apply text-3xl;
+
+    .blog-content h3 {
+        @apply mt-8 mb-3 text-2xl font-semibold text-primary;
+    }
+
+    .blog-content p {
+        @apply my-5 text-primary/90;
+    }
+
+    .blog-content a {
+        color: var(--color-link);
+        @apply underline decoration-primary/20 underline-offset-4 transition-colors;
+    }
+
+    .blog-content a:hover {
+        color: var(--color-link-hover);
+        @apply decoration-primary/50;
+    }
+
+    .blog-content strong {
+        @apply font-semibold text-primary;
+    }
+
+    .blog-content ul,
+    .blog-content ol {
+        @apply my-5 ml-6 space-y-2;
+    }
+
+    .blog-content ul {
+        @apply list-disc;
+    }
+
+    .blog-content ol {
+        @apply list-decimal;
+    }
+
+    .blog-content li {
+        @apply text-primary/90;
+    }
+
+    .blog-content li::marker {
+        color: var(--color-secondary);
+    }
+
+    .blog-content blockquote {
+        @apply my-8 border-l-4 border-primary/20 py-1 pl-6 italic text-secondary;
+    }
+
+    .blog-content code {
+        @apply rounded bg-primary/5 px-1.5 py-0.5 text-[0.9em] font-mono;
+    }
+
+    .blog-content pre {
+        @apply my-8 overflow-x-auto rounded-lg bg-primary/5 p-4;
+    }
+
+    .blog-content pre code {
+        @apply bg-transparent p-0;
+    }
+
+    .blog-content hr {
+        @apply my-12 border-primary/15;
     }
 }

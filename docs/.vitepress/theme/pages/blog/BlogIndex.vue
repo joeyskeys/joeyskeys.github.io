@@ -5,15 +5,15 @@ const { frontmatter } = useData()
 </script>
 
 <template>
-  <section class="mx-4">
-    <h1 class="my-4 text-l font-semibold">
-      <a href="/">Home</a>
-      > {{ frontmatter.title }}
-    </h1>
+  <section>
+    <nav class="my-4 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-secondary">
+      <a href="/" class="transition-colors hover:text-primary">Home</a>
+      <span aria-hidden="true" class="text-secondary/60">›</span>
+      <span class="truncate text-primary/80">{{ frontmatter.title }}</span>
+    </nav>
 
-    <div class="space-y-6">
+    <article class="mt-8">
       <BlogCard v-for="post in data" :key="post.url" :post="post" />
-    </div>
-
+    </article>
   </section>
 </template>

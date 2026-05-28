@@ -1,33 +1,22 @@
 <script lang="ts" setup>
-import { formatDate } from '../../../script/utils.ts'
+import BlogPageHeader from '../../components/BlogPageHeader.vue'
 const { frontmatter } = useData()
 </script>
 
 <template>
   <div>
-    <h1 class="my-4 text-l font-semibold">
-      <a href="/">Home</a>
-      >
-      <a href="/blog">Blog</a>
-      >
-      {{ frontmatter.title }}
-    </h1>
-    <!--article
-      class="mx-4 border-4 border-black bg-white p-8 shadow-[8px_8px_0_black] space-y-16 md:p-12"
-    >
-      <h1 class="text-6xl font-semibold">
-        {{ frontmatter.title }}
-      </h1>
+    <nav class="my-4 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-secondary">
+      <a href="/" class="transition-colors hover:text-primary">Home</a>
+      <span aria-hidden="true" class="text-secondary/60">›</span>
+      <a href="/blog" class="transition-colors hover:text-primary">Blog</a>
+      <span aria-hidden="true" class="text-secondary/60">›</span>
+      <span class="truncate text-primary/80">{{ frontmatter.title }}</span>
+    </nav>
 
-      <Content class="text-black prose prose-zinc" />
-    </article-->
-    <article class="flex flex-col mt-5">
-      <h1 class="text-6xl font-semibold mb-2">
-        {{ frontmatter.title }}
-      </h1>
-      <div class="my-1 text-sm text-secondary">{{ formatDate(frontmatter.date) }}</div>
+    <article class="mt-8">
+      <BlogPageHeader :title="frontmatter.title" :date="frontmatter.date" />
 
-      <Content class="my-3 text-lg content" />
+      <Content class="blog-content max-w-3xl" />
     </article>
   </div>
 </template>
