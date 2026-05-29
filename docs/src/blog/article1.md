@@ -51,6 +51,19 @@ Copy world-space transform values from one object and paste them onto others:
 
 Handy for matching poses or snapping offsets without digging through the channel box.
 
+## Getting started
+
+Once VAM is on your `MAYA_MODULE_PATH`, it loads automatically when Maya starts — hotkeys are registered and the plugin is loaded via `userSetup.py`.
+
+To begin a session, activate the tool in either of these ways:
+
+- Click the **vam** button on Maya's built-in tool shelf (next to the standard move / rotate / scale tools)
+- Or run `cmds.setToolTo('vam')` in the Script Editor
+
+![Activating VAM from the Maya tool shelf](../public/images/article1/start.png)
+
+When the tool is active, the VAM hotkey context takes over and the shortcuts from the sections above apply. Press `Esc` to leave VAM and return to Maya's default select tool.
+
 ## How it's built
 
 Under the hood, VAM is a standard Maya `MPxContext` plugin paired with a Python state machine. Viewport events (mouse press, drag, release) go through the context; keyboard events route through Maya's hotkey system in a dedicated hotkey context tied to the tool. That split keeps performance-sensitive input on the native side while state logic and bindings stay easy to tweak in Python.
