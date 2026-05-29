@@ -29,6 +29,10 @@
         @apply w-8 h-8 m-1;
     }
 
+    .header-social-svg {
+        @apply w-[18px] h-[18px];
+    }
+
     .post-link {
         color: var(--color-link);
     }
@@ -39,6 +43,10 @@
 
     .test-block {
         @apply bg-red-50;
+    }
+
+    .blog-page {
+        @apply mx-2 w-auto;
     }
 
     .blog-content {

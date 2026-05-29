@@ -5,11 +5,11 @@ date: 2025-11-22
 excerpt: A quick look at VAM, a Maya plugin that brings modal, keyboard-driven transforms and Vim-style registers to animation workflows.
 ---
 
-I've started a new side project called **VAM** — short for **Vim-like Animation Manipulator**. It's a Maya plugin that tries to bring the modal, keyboard-first workflow of Vim (and a bit of Blender) into rig and animation work.
+I've started a new side project called **VAM** — short for **Vim for Animator**. It's a Maya plugin that brings the modal, keyboard-first workflow of Vim (and a bit of Blender) into rig and animation work.
 
 ## Why build this?
 
-Maya's default transform tools work, but they often pull you into gizmo-heavy, mouse-first interactions. When you're jumping between translate, rotate, and scale — or repeatedly selecting the same control sets — the context switching adds up. I wanted something where you stay in one tool, switch modes with single keys, and keep your hands on the keyboard as much as possible.
+Maya's default transform tools work, but they lean heavily on the mouse — gizmo clicks, menu hunting, and repetitive selection. When you're jumping between translate, rotate, and scale, or re-selecting the same controls frame after frame, the overhead adds up. I wanted a workflow where both hands pull their weight: the mouse stays in the viewport for manipulation, while the keyboard handles mode switches, constraints, and selection — two hands collaborating, rather than one doing all the work.
 
 ## What it does
 
@@ -23,7 +23,9 @@ Instead of grabbing a gizmo and hoping you picked the right axis, you enter expl
 - **Rotate** — `e`
 - **Scale** — `r`
 
-While in a mode, drag in the viewport to manipulate the selection. Number keys cycle axis and coordinate-space constraints. Confirm with a click, or hit `q` to bail out. The camera stays locked during a modal session so your framing doesn't drift while you edit.
+![Modal translate, rotate, and scale in the Maya viewport](../public/images/article1/transform.gif)
+
+Once a transform mode is active, VAM enters a modal state — similar to Blender. Move the mouse to adjust the value; number keys cycle axis and coordinate-space constraints. Confirm with a click, or press `q` to cancel. The camera stays locked during a modal session so your framing doesn't drift while you edit.
 
 ### Vim-style registers
 
@@ -34,6 +36,8 @@ This is the part I'm most excited about. Registers let you stash object selectio
 - **Recall (add)** — `Ctrl+Shift+T`
 - **Recall (remove)** — `Ctrl+Alt+T`
 
+![Assigning and recalling selections with Vim-style registers](../public/images/article1/registers.gif)
+
 If you animate the same set of FK controls every few frames, this saves a lot of repetitive clicking.
 
 ### Copy / paste transforms
@@ -42,6 +46,8 @@ Copy world-space transform values from one object and paste them onto others:
 
 - **Copy** — `Ctrl+C`, then `w`, `e`, `r`, or `a` for translate, rotate, scale, or all channels
 - **Paste** — `Ctrl+V` onto the current selection
+
+![Copying and pasting world-space transforms between objects](../public/images/article1/copypaste.gif)
 
 Handy for matching poses or snapping offsets without digging through the channel box.
 
