@@ -7,6 +7,8 @@ excerpt: A quick look at VAM, a Maya plugin that brings modal, keyboard-driven t
 
 I've started a new side project called **VAM** — short for **Vim for Animator**. It's a Maya plugin that brings the modal, keyboard-first workflow of Vim (and a bit of Blender) into rig and animation work.
 
+**GitHub repository:** [https://github.com/joeyskeys/vam](https://github.com/joeyskeys/vam)
+
 ## Why build this?
 
 Maya's default transform tools work, but they lean heavily on the mouse — gizmo clicks, menu hunting, and repetitive selection. When you're jumping between translate, rotate, and scale, or re-selecting the same controls frame after frame, the overhead adds up. I wanted a workflow where both hands pull their weight: the mouse stays in the viewport for manipulation, while the keyboard handles mode switches, constraints, and selection — two hands collaborating, rather than one doing all the work.
@@ -74,4 +76,4 @@ Key bindings live in `configs/default_profile.json` and can be remapped without 
 
 VAM is still in early development — APIs, bindings, and behavior will change. But the core ideas are in place: modal transforms, registers, and copy/paste transforms, all behind a single viewport tool.
 
-More to come as I flesh out visual feedback, animation-curve tooling, and the rest of the register workflow. If you're curious, the project lives at [github.com/joeyskeys/vam](https://github.com/joeyskeys/vam) — though fair warning, it's very much a work in progress.
+More to come as I flesh out visual feedback, animation-curve tooling, and the rest of the register workflow. Fair warning: it's very much a work in progress.
