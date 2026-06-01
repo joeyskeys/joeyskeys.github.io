@@ -1,7 +1,7 @@
 ---
 layout: blog-show
 title: Introducing VAM — Vim-like Animation in Maya
-date: 2025-11-22
+date: 2026-5-30
 excerpt: A quick look at VAM, a Maya plugin that brings modal, keyboard-driven transforms and Vim-style registers to animation workflows.
 ---
 
