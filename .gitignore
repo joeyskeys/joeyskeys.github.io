@@ -10,4 +10,5 @@ docs/.vitepress/dist/
 components.d.ts
 auto-imports.d.ts
 
-public/
+# build output (vitepress outDir: docs/public/dist)
+docs/public/
